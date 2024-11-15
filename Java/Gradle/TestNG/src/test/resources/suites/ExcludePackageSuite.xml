@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ExcludePackageSuite">
+    <test name="ExcludePackageSuiteTest">
+        <packages>
+            <package name="io.bytescraft.testng.*">
+                <exclude name="io.bytescraft.testng.numbers"/>
+                <exclude name="io.bytescraft.testng.failed"/>
+            </package>
+        </packages>
+        <classes>
+            <class name="io.bytescraft.testng.ParameterizedTest">
+                <methods>
+                    <exclude name=".*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
